@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDrive - Carbon Emission Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">CarboNill</div>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#calculator" onclick="showSection('calculator')">Calculator</a></li>
+            <li><a href="#offers" onclick="showSection('offers')">Offers</a></li>
+            <li><a href="#login" onclick="showSection('login')">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <!-- Dynamic Banner -->
+        <div class="banner">
+            <h1>Plan Your Journey with EcoDrive</h1>
+            <p>Book your next trip and contribute to a sustainable future.</p>
+            <button onclick="scrollToForm()">Book Now</button>
+        </div>
+
+        <!-- Input Form for Location and Destination -->
+        <form id="travelForm" class="travel-form">
+            <label for="location">Start Location:</label>
+            <input type="text" id="location" placeholder="Enter your starting location" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="Enter your destination" required>
+
+            <label for="travelDate">Travel Date:</label>
+            <input type="date" id="travelDate" required>
+
+            <!-- <button type="button" id="search" onclick="findTravelOptions()">Search</button> -->
+            <button onclick="openNewTab()">Search</button>
+            <script>
+                function openNewTab() {
+                    window.open("index2.html", "_blank");
+                }
+            </script>
+        </form>
+
+        <!-- Travel Results Section -->
+        <div id="travelResults" class="hidden">
+            <h3>Search Results</h3>
+            <div id="resultsContent">
+                <p>Enter your route and date to view travel options.</p>
+            </div>
+        </div>
+
+        <!-- Popular Routes -->
+        <div class="popular-routes">
+            <h2>Popular Routes</h2>
+            <ul>
+                <li onclick="fillRoute('New Delhi', 'Lucknow')">New Delhi → Lucknow</li>
+                <li onclick="fillRoute('Mumbai', 'Pune')">Mumbai → Pune</li>
+                <li onclick="fillRoute('Chennai', 'Hyderabad')">Chennai → Hyderabad</li>
+            </ul>
+        </div>
+
+        <!-- Offers Section -->
+        <div class="offers">
+            <h2>Exclusive Offers</h2>
+            <div class="reward">
+                <div class="offer-card" id="ocard1">
+                    <h3>20% Off on First Booking</h3>
+                    <p>Use code: FIRST20</p>
+                </div>
+                <div class="offer-card" id="ocard2">
+                    <h3>Save upto Rs-500 on ICICI</h3>
+                    <p>Use code: ICICI500</p>
+                </div>
+                <div class="offer-card" id="ocard3">
+                    <h3>Get 10% off on SBI Net Banking</h3>
+                    <p>Use code: SBI10</p>
+                </div>
+                <div class="offer-card" id="ocard4">
+                    <h3>Save upto Rs-500 on UPSRTC</h3>
+                    <p>Use code: UPSRTC</p>
+                </div>
+                <div class="offer-card" id="ocard5">
+                    <h3>Carbon Neutral Trips</h3>
+                    <p>Earn extra rewards for choosing eco-friendly routes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- About Section -->
+    <div id="about" class="section hidden">
+        <h2>About CarboNill</h2>
+        <p>At CarboNill, we're committed to helping individuals reduce their carbon footprint and contribute to a cleaner planet. Our carbon emission calculator enables drivers to estimate the CO₂ emissions of their vehicles and take actionable steps to
+            reduce them. Here's how we help the environment:</p>
+
+        <div class="impact-section">
+            <div class="impact-box">
+                <img src="eco-friendly-car-paper-cut-style-renewable-and-sustainable-energy-concept-generative-ai-photo.jpeg" alt="Eco Friendly Car" class="impact-img">
+                <h3>Reduce Carbon Footprint</h3>
+                <p>By calculating your emissions, we provide insights into how reducing fuel consumption can lower your carbon footprint, thus helping fight climate change.</p>
+            </div>
+            <div class="impact-box">
+                <img src="360_F_323659172_qAAbGT4OE9UTELLC87MZqHKfurkYWg8C.jpg" alt="Green Energy" class="impact-img">
+                <h3>Promote Green Energy</h3>
+                <p>We encourage the use of electric vehicles (EVs), which are powered by renewable energy sources and have a significantly lower environmental impact.</p>
+            </div>
+            <div class="impact-box">
+                <img src="istockphoto-1313605812-612x612.jpg" alt="Reward System" class="impact-img">
+                <h3>Eco-Friendly Rewards</h3>
+                <p>With each emission calculation, you earn rewards for making sustainable choices, which can be used to purchase eco-friendly products and services.</p>
+            </div>
+        </div>
+
+        <div class="environmental-impact">
+            <h2>How We Impact the Environment</h2>
+            <p>Transportation is one of the biggest contributors to greenhouse gas emissions. By offering an easy-to-use tool that helps individuals and businesses calculate their carbon emissions, CarboNill empowers users to make informed decisions that
+                lead to less pollution and a healthier planet.</p>
+            <p>Our goal is to not only raise awareness about the environmental impact of transportation but also to promote greener alternatives, reduce fuel consumption, and ultimately reduce the carbon emissions that contribute to global warming.</p>
+        </div>
+    </div>
+
+    <!-- Calculator Section (Initially Hidden) -->
+    <div id="calculator" class="section hidden">
+        <h2>Vehicle Carbon Emission Calculator</h2>
+        <p>Calculate your carbon emissions and make a difference today!</p>
+        <form id="emissionForm">
+            <label for="vehicleType">Vehicle Type:</label>
+            <select id="vehicleType" required onchange="updateFuelOptions()">
+                <option value="">Select Vehicle Type</option>
+                <option value="car">Car</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="truck">Truck</option>
+                <option value="bus">Bus</option>
+            </select>
+
+            <label for="fuelType">Fuel Type:</label>
+            <select id="fuelType" required onchange="updateEstimatedFuelEfficiency()">
+                <option value="">Select Fuel Type</option>
+            </select>
+
+            <label for="distance">Distance Traveled (km):</label>
+            <input type="number" id="distance" required>
+
+            <label for="fuelEfficiency">Fuel Efficiency (km/l for fuel, kWh/km for electric):</label>
+            <input type="number" id="fuelEfficiency" placeholder="Enter or use estimated">
+
+            <!-- <div class="checkbox-container">
+                <input type="checkbox" id="unknownEfficiency" onchange="handleUnknownEfficiency()"> 
+                <label for="unknownEfficiency">I don't know the fuel efficiency</label>
+            </div> -->
+
+            <button type="button" onclick="calculateEmissions()">Calculate Emissions</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+        <div id="result">
+            <h3>Result:</h3>
+            <p id="emissionOutput">Enter values to see your carbon emissions.</p>
+        </div>
+    </div>
+    <!-- Login Section -->
+    <div id="login" class="section hidden">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+
+        <p>New user? <a href="#" onclick="showSignup()">Sign up here</a></p>
+    </div>
+    <div id="forgotPassword" class="section hidden">
+        <h2>Reset Password</h2>
+        <form id="forgotPasswordForm">
+            <label for="resetEmail">Email:</label>
+            <input type="email" id="resetEmail" placeholder="Enter your registered email" required>
+            <button type="submit">Reset Password</button>
+        </form>
+        <p><a href="#" onclick="showLogin()">Back to Login</a></p>
+    </div>
+
+    <!-- Signup Section -->
+    <div id="signup" class="section hidden">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <label for="signupName">Name:</label>
+            <input type="text" id="signupName" placeholder="Enter your name" required>
+
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+
+
+    <!-- Offers Section (Initially Hidden) -->
+    <div id="offers" class="section hidden">
+        <h3>Your Eco-Friendly Offer:</h3>
+        <p id="offerOutput">Calculate emissions to see your offer!</p>
+
+        <div id="rewardSystem">
+            <h3>Reward Progress:</h3>
+            <div class="progress-bar">
+                <div id="rewardBar" class="progress"></div>
+            </div>
+            <p id="badgeOutput">Your Badge Level: Bronze</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Transport Finder. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>

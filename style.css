@@ -1,0 +1,475 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    /* display: flex; */
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+    background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+}
+body, h1, h2, h3, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar .nav-logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background-color: #333; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%); */
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Styles */
+.section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+}
+
+.hidden {
+    display: none;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+/* About Section - Impact Boxes */
+.impact-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.impact-box {
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* background: radial-gradient(788px at 0.7% 3.4%, rgb(164, 231, 192) 0%, rgb(255, 255, 255) 90%); */
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+}
+
+.impact-box:hover {
+    transform: translateY(-10px);
+}
+
+.impact-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.impact-box h3 {
+    margin-top: 10px;
+    color: #004cce;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.impact-box p {
+    font-size: 1em;
+    color: #333;
+}
+#about h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Environmental Impact Section */
+.environmental-impact h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #222;
+}
+
+.environmental-impact p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Button and Other Inputs */
+button {
+    /* background-color: #4CAF50; */
+    background-color: rgb(55, 138, 247);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(9, 81, 175);
+}
+
+/* Calculator Section */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+#calculator p{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: all 0.3s ease; /* Smooth transition effect */
+    border-radius: 4px; /* Optional: Rounded edges for hover background */
+}
+
+/* Hover Effects */
+.nav-links a:hover {
+    background-color: #242826; /* Example: Green background on hover */
+    color: white; /* Text color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+}
+#offers {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    /* background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); */
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+}
+
+#offers h3 {
+    font-size: 1.5rem;
+    color: rgb(53, 28, 239); /* Dark green color */
+}
+#offers p{
+    color: #000;
+}
+#offerOutput {
+    font-size: 1.2rem;
+    color: #388e3c; /* Vibrant green text */
+    margin-top: 10px;
+}
+#home {
+    height: 100%; 
+    color: rgb(0, 0, 0); /* Ensures text is visible over the image */
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+#home h1{
+    text-align: center;
+    padding: 20px;
+}
+#home h1+p{
+    text-align: center;
+}
+#result{
+    text-align: center;
+}
+#rewardSystem{
+    padding-top: 20px;
+}
+#login p{
+    text-align: center;
+}
+#signup p{
+    text-align: center;
+}
+.travel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds shadow for text readability */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+}
+.travel-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.travel-form button {
+    padding: 10px;
+    background-color: rgb(55, 138, 247);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.travel-form button:hover {
+    background-color: rgb(9, 81, 175);
+}
+
+#travelResults {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #e8f5e9;
+    border-radius: 8px;
+    background-color: #e6f2ff;
+}
+
+.hidden {
+    display: none;
+}
+/* Banner Styling */
+.banner {
+    color: #000;
+    text-align: center;
+    padding-bottom: 20px;
+    background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    height: 420px;
+    background-image: url(IMG-20241121-WA0004-01-01.jpeg.jpg);
+}
+
+.banner button {
+    width: 500px;
+    padding: 10px 10px;
+    font-size: 18px;
+    background-color: rgb(55, 138, 247);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: rgb(9, 81, 175);
+}
+#calculator{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);;
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+}
+
+/* Popular Routes */
+.popular-routes {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.popular-routes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-routes li {
+    cursor: pointer;
+    color: #000;
+    margin: 5px 0;
+}
+.popular-routes h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+.offers h2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+.popular-routes li:hover {
+    text-decoration: underline;
+}
+
+/* Offers Section */
+.offers {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+}
+.offer-card {
+    margin: 10px auto;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    width: 250px;
+    height: 150px;
+}
+.offer-card:hover {
+    transform: translateY(-10px);
+}
+.reward{
+    display: flex;
+    justify-content: center;
+}
+.offer-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.offer-card p {
+    margin: 5px 0;
+    color: #fff;
+}
+#ocard1{
+    background: radial-gradient(circle at 50.4% 50.5%, rgb(251, 32, 86) 0%, rgb(135, 2, 35) 90%);
+}
+#ocard2{
+    background: radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);
+}
+#ocard3{
+    background: linear-gradient(91.7deg, rgb(50, 25, 79) -4.3%, rgb(122, 101, 149) 101.8%);
+}
+#ocard4{
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+#ocard5{
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+#forgotPassword {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);;
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+}
+
+#forgotPassword h2 {
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #555;
+    color: white;
+    bottom: 0;
+}
+  #login{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+  }
+  #signup{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%);
+  }
+  
+  
+  

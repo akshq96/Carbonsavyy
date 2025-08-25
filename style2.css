@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+    width: 100%;
+}
+header{
+    background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: azure;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+}
+h2 {
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ddd;
+}
+
+h3 {
+    color: #1976d2;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+thead th{
+    background-color: #e0e0e0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.bus-company {
+    margin-bottom: 40px;
+}
+#red-bus h3{
+    margin-top: 80px;
+    padding: 10px;
+    color: #d32f2f;
+}
+#intercity-bus h3{
+    color: #0d7ceb;
+}
+#flix-bus h3{
+    color: rgb(73, 219, 10);;
+}
+a{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
