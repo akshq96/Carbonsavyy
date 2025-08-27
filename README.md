@@ -6,3 +6,4 @@ At CarbonSavy, we're committed to helping individuals reduce their carbon footpr
 
 Transportation is one of the biggest contributors to greenhouse gas emissions. By offering an easy-to-use tool that helps individuals and businesses calculate their carbon emissions, CarboNill empowers users to make informed decisions that lead to less pollution and a healthier planet.
 
+Our goal is to not only raise awareness about the environmental impact of transportation but also to promote greener alternatives, reduce fuel consumption, and ultimately reduce the carbon emissions that contribute to global warming.
